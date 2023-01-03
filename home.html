@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - The Bakery</title>
+    <link rel="icon" href="images/TheBakeryWebsiteLogo2.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="bakery.css">
+    <!-- Javascript -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+    <!-- Footer Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+    <!-- Logo and Navigation Bar -->
+    <div class="navbar">
+        <a href="home.html"><img src="images//TheBakeryLogo.png" class="logo" alt="The Bakery"></a>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="promotion.html">Promotion</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </div>
+    <!-- Banner -->
+    <div class="banner">
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <!-- Can links to promotion.html -->
+                <div class="swiper-slide"><a href="promotion.html"><img src="images//BlackFriday2.jpg" alt="Black Friday Promo"></a></div>
+                <div class="swiper-slide"><a href="promotion.html"><img src="images//ChristmasPromotion2.jpg" alt="Christmas Promotion"></a></div>
+                <div class="swiper-slide"><a href="promotion.html"><img src="images//NewYearEvent2.jpg" alt="New Year Event"></a></div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </div>
+    <!-- Main -->
+    <div class="main">
+        <div class="container">
+            <h3>Fresh from the oven</h3>
+            <div class="infocard">
+                <div class="infocolumn">
+                    <p>Baked to perfection using traditional recipes, it's always satisfying when you bite into our oven-fresh pastries and cakes.</p><br>
+                    <p>Our best-selling croissants are moist and fluffy, and our sandwiches make a perfect light meal for any time of the day.</p><br>
+                </div>
+                <div class="infocolumn">
+                    <p>Don't forget to try our popular homemade Genting Chicken Pie, too!</p><br>
+                    <p><b>Recommended</b></p><br>
+                    <ul>
+                        <li>Tiramisu</li>
+                        <li>Cheese Cake</li>
+                        <li>Swiss Roll Series</li>
+                    </ul>
+                    <br><br>
+                    <p>Location: Lobby Level, Genting Grand, Resorts World Genting, 69000 Genting Highlands, Pahang</p><br>
+                    <p>Weekdays: 7am &mdash; 10pm<br>Weekends: 7am &mdash; 12mn</p><br>
+                    <p>Dress Code: Casual</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <div class="footer">
+        <div class="footercontent">
+            <div class="footerrow">
+                <div class="footercol">
+                    <h4>The Bakery</h4>
+                    <ul>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="promotion.html">Promotion</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </div>
+                <div class="footercol">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><span class="name">Tan Han Shen (Founder)</span></li>
+                        <li><a href="tel:012-3456789">012-345 6789</a></li>
+                        <li><span class="name">Yeong Weng Ken (Manager)</span></li>
+                        <li><a href="tel:019-8765432">019-876 5432</a></li>
+                        <li><span class="name">Calder Lee Kai De (Bakery Coordinator)</span></li>
+                        <li><a href="tel:018-9765432">018-976 5432</a></li>
+                    </ul>
+                </div>
+                <div class="footercol">
+                    <h4>Location</h4>
+                    <ul>
+                        <li><a href="https://www.google.com/maps/place/The+Bakery/@3.4233082,101.7898889,17z/data=!4m5!3m4!1s0x31cc1400fff77fcd:0x1e3a3df3dba0a40d!8m2!3d3.4233028!4d101.7920829">Lobby Level, Genting Grand, Resorts World Genting, 69000 Genting Highlands, Pahang</a></li>
+                    </ul>
+                </div>
+                <div class="footercol">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/people/The-Bakery/100088519877809/?is_tour_completed=true"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/thebakery2023?t=3g_s5Lz5pcNogCX-MOrQ0Q&s=08"><i class="fab fa-twitter"></i></a>
+                        <a href="https://instagram.com/thebakery2023?igshid=ZDdkNTZiNTM="><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Javascript made the banner to auto swipe and allow to click the button below to change -->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            });
+    </script>
+</body>
+</html>

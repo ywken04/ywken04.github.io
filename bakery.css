@@ -1,0 +1,863 @@
+/* Import Font Family from Internet */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #FFEBCD;
+    margin-top: 180px;
+    line-height: 1.5;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Logo */
+.logo{
+    width: 300px;
+    padding-left: 20px;
+}
+
+/* Navigation Bar */
+.navbar{
+    background-image: linear-gradient(rgba(255, 255, 255, 0.75),rgba(255, 255, 255, 0.75)), url(images//NavbarBackgorund.jpg);
+    width: 100%;
+    height: 160px;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: #000000;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #B8860B;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after{
+    width: 100%;
+}
+
+/* Banner */
+.swiper{
+    width: 60%;
+    height: fit-content;
+    margin-bottom: 20px;
+}
+
+.swiper-slide img{
+    width: 100%;
+}
+
+.swiper .swiper-button-prev, .swiper .swiper-button-next{
+    color: #B8860B;
+}
+
+.swiper .swiper-pagination-bullet-active{
+    background: #B8860B;
+}
+
+/* Main in the home.html */
+.container{
+    width: 60%;
+    align-items: center;
+    margin: 20px auto;
+    text-align: justify;
+}
+
+.container h3{
+    font-size: 40px;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.infocard{
+    display: flex;
+}
+
+.infocolumn{
+    width: 50%;
+    height: auto;
+    padding: 0 50px 30px 50px;
+}
+
+.infocolumn ul li{
+    margin-left: 50px;
+}
+
+/* Main in the promotion.html */
+.promotion{
+    width: 85%;
+    margin: auto;
+    text-align: justify;
+}
+
+.promotion h1{
+    font-size: 50px;
+}
+
+.promotioncontainer{
+    display: flex;
+}
+
+.promotioncol{
+    width: 50%;
+    height: auto;
+}
+
+.promotioncontent{
+    padding: 20px;
+}
+
+.promotioncontent h2{
+    font-size: 2em;
+}
+
+.promotioncontent p{
+    font-size: 1.2em;
+}
+
+.promotionimg{
+    transition: 1s;
+}
+
+.promotionimg img{
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-radius: 10px;
+}
+
+.promotionimg:hover{
+    transform: scale(1.05);
+    z-index: 10;
+}
+
+/* Footer */
+.footer{
+    background-color: #24262b;
+    padding: 70px 0;
+}
+
+.footercontent{
+    max-width: 1170px;
+    margin: auto;
+}
+
+.footerrow{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footercol{
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footercol h4{
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+
+.footercol h4::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #B8860B;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.name{
+    color: #ffffff;
+}
+
+.footercol ul{
+    list-style: none;
+}
+
+.footercol ul li:not(:last-child){
+    margin-bottom: 10px;
+}
+
+.footercol ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.footercol ul li a:hover{
+    color: #ffffff;
+    padding-left: 8px;
+}
+
+.footercol .social-links a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgb(255, 255, 255, 0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+}
+
+.footercol .social-links a:hover{
+    color: #24262b;
+    background-color: #ffffff;
+}
+
+/* respnsive (footer) */
+@media(max-width: 767px){
+    .footercol{
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width: 574px){
+    .footercol{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+
+/* Main in the gallery.html */
+.gallery{
+    width: 100%;
+    text-align: center;
+}
+
+.gallery h1{
+    font-size: 35px;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.gallery h1:before{
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 3px;
+    background-color: #B8860B;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.photo-gallery{
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+/* galleryone */
+.galleryone{
+    position: relative;
+    height: 230px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.galleryone img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.galleryone::before{
+    content: 'This is the corner we place the food for sales.';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    width: 100%;
+    margin-top: -100px;
+    opacity: 0;
+    transition: 0.3s;
+    transition-delay: .2s;
+    z-index: 1;
+}
+
+.galleryone::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: .3s;
+}
+
+.galleryone:hover::after{
+    height: 100%;
+}
+
+.galleryone:hover::before{
+    margin-top: 0;
+    opacity: 1;
+}
+
+/* gallerytwo */
+.gallerytwo{
+    position: relative;
+    height: 230px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.gallerytwo img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.gallerytwo::before{
+    content: 'The worker will renew the stock every hour to make sure the food is fresh.';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    width: 100%;
+    margin-top: -100px;
+    opacity: 0;
+    transition: 0.3s;
+    transition-delay: .2s;
+    z-index: 1;
+}
+
+.gallerytwo::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: .3s;
+}
+
+.gallerytwo:hover::after{
+    height: 100%;
+}
+
+.gallerytwo:hover::before{
+    margin-top: 0;
+    opacity: 1;
+}
+
+/* gallerythree */
+.gallerythree{
+    position: relative;
+    height: 230px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.gallerythree img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.gallerythree::before{
+    content: 'This is the pastry chef team we have.';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    width: 100%;
+    margin-top: -100px;
+    opacity: 0;
+    transition: 0.3s;
+    transition-delay: .2s;
+    z-index: 1;
+}
+
+.gallerythree::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: .3s;
+}
+
+.gallerythree:hover::after{
+    height: 100%;
+}
+
+.gallerythree:hover::before{
+    margin-top: 0;
+    opacity: 1;
+}
+
+/* gallerytfour */
+.galleryfour{
+    position: relative;
+    height: 230px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.galleryfour img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.galleryfour::before{
+    content: 'This is where the customer can enjoy their lovely food.';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    width: 100%;
+    margin-top: -100px;
+    opacity: 0;
+    transition: 0.3s;
+    transition-delay: .2s;
+    z-index: 1;
+}
+
+.galleryfour::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: .3s;
+}
+
+.galleryfour:hover::after{
+    height: 100%;
+}
+
+.galleryfour:hover::before{
+    margin-top: 0;
+    opacity: 1;
+}
+
+/* gallerytfive */
+.galleryfive{
+    position: relative;
+    height: 230px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.galleryfive img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.galleryfive::before{
+    content: 'The food will also place behind the window to attract the customer.';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    width: 100%;
+    margin-top: -100px;
+    opacity: 0;
+    transition: 0.3s;
+    transition-delay: .2s;
+    z-index: 1;
+}
+
+.galleryfive::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: .3s;
+}
+
+.galleryfive:hover::after{
+    height: 100%;
+}
+
+.galleryfive:hover::before{
+    margin-top: 0;
+    opacity: 1;
+}
+
+/* gallerytsix */
+.gallerysix{
+    position: relative;
+    height: 230px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.gallerysix img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.gallerysix::before{
+    content: 'This is how inside of our bakery looks like.';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    width: 100%;
+    margin-top: -100px;
+    opacity: 0;
+    transition: 0.3s;
+    transition-delay: .2s;
+    z-index: 1;
+}
+
+.gallerysix::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: .3s;
+}
+
+.gallerysix:hover::after{
+    height: 100%;
+}
+
+.gallerysix:hover::before{
+    margin-top: 0;
+    opacity: 1;
+}
+
+/* gallerytseven */
+.galleryseven{
+    position: relative;
+    height: 230px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.galleryseven img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.galleryseven::before{
+    content: 'This is the scene from outside of the bakery.';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    width: 100%;
+    margin-top: -100px;
+    opacity: 0;
+    transition: 0.3s;
+    transition-delay: .2s;
+    z-index: 1;
+}
+
+.galleryseven::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: .3s;
+}
+
+.galleryseven:hover::after{
+    height: 100%;
+}
+
+.galleryseven:hover::before{
+    margin-top: 0;
+    opacity: 1;
+}
+
+/* galleryteight */
+.galleryeight{
+    position: relative;
+    height: 230px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.galleryeight img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.galleryeight::before{
+    content: 'Our worker will always have a sweet smile for our friendly customer.';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    width: 100%;
+    margin-top: -100px;
+    opacity: 0;
+    transition: 0.3s;
+    transition-delay: .2s;
+    z-index: 1;
+}
+
+.galleryeight::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: .3s;
+}
+
+.galleryeight:hover::after{
+    height: 100%;
+}
+
+.galleryeight:hover::before{
+    margin-top: 0;
+    opacity: 1;
+}
+
+/* gallerytnine */
+.gallerynine{
+    position: relative;
+    height: 230px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.gallerynine img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.gallerynine::before{
+    content: 'We also have outdoor place for customer to enjoy the scene outside.';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    width: 100%;
+    margin-top: -100px;
+    opacity: 0;
+    transition: 0.3s;
+    transition-delay: .2s;
+    z-index: 1;
+}
+
+.gallerynine::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: .3s;
+}
+
+.gallerynine:hover::after{
+    height: 100%;
+}
+
+.gallerynine:hover::before{
+    margin-top: 0;
+    opacity: 1;
+}
+
+/* Main in the menu.html */
+.menu {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    padding-bottom: 10px;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 200px;
+    height: 220px;
+    display: inline-block;
+    margin-left: 19px;
+    margin-right: 19px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.flip-card-front {
+    background-color: #bbb;
+    color: black;
+}
+
+.flip-card-back {
+    background-color: #DEB887;
+    color: #000000;
+    transform: rotateY(180deg);
+    padding: 8px 5px;
+    font-size: 14px;
+}
+
+.flip-card-back .price {
+    bottom: 1px;
+    position: absolute;
+    text-align: center;
+    width: 194px;
+    height: 50px;
+    vertical-align: middle;
+    padding-bottom: 2px;
+}
+
+.flip-card-front img{
+    width: 200px;
+    height: 220px;
+}
+
+.catagory {
+    line-height: 100px;
+    background-color: #B8860B;
+    /* margin-top: 10px; */
+    margin-bottom: 10px;
+    color: #ffffff;
+    padding-left: 20px;
+}
+
+/* Main in the about.html */
+.about{
+    width: 80%;
+    margin: auto;
+    text-align: justify;
+}
+
+.about h2{
+    font-size: 35px;
+}
+
+.about h3{
+    font-size: 25px;
+}
+
+.video{
+    text-align: center;
+    margin: 30px 0;
+}
+
+.location{
+    text-align: center;
+    margin: 30px 0;
+}
